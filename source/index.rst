@@ -8,8 +8,6 @@ So, You've Decided To Peer...
 
 This document is under construction.
 
-Please submit pull-requests on GitHub!
-
 Contents:
 
 .. toctree::
@@ -23,3 +21,15 @@ Contents:
    RPKI
    FullExample
 
+How to contribute:
+
+* Fork https://github.com/dotwaffle/peering101
+* Make changes
+* Push them to GitHub
+* Make a Pull Request
+* Once merged, the document updates automatically!
+
+How to point our errors or missing information:
+
+* Submit an issue at https://github.com/dotwaffle/peering101/issues
+* We'll email you if there's any further clarification needed!
