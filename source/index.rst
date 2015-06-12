@@ -24,7 +24,7 @@ Contents:
 How to contribute:
 
 * Fork https://github.com/dotwaffle/peering101
-* Make changes
+* Make changes -- you'll want to use http://sphinx-doc.org/rest.html
 * Push them to GitHub
 * Make a Pull Request
 * Once merged, the document updates automatically!
