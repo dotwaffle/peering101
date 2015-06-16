@@ -198,8 +198,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'Peering101.tex', u'Peering 101 Documentation',
-   u'The Peering Community', 'manual'),
+  ('index', 'Peering101.tex', u'Peering 101 Handbook',
+   u'Matthew Walster', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -229,7 +229,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'peering101', u'Peering 101 Documentation',
-     [u'The Peering Community'], 1)
+     [u'Matthew Walster'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -243,7 +243,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Peering101', u'Peering 101 Documentation',
-   u'The Peering Community', 'Peering101', 'One line description of project.',
+   u'Matthew Walster', 'Peering101', 'How to peer safely and securely.',
    'Miscellaneous'),
 ]
 

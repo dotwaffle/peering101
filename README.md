@@ -18,14 +18,14 @@ It will not cover:
 * The history of peering.
 * Good / Bad networks to peer with.
 * BGP Path selection.
-* BGP Communities, except with an IXP Route Server.
+* BGP Communities, except with an IXP Route Server if relevant.
 
 It should remain, where possible, without overly vendor specific features or mentions of particular products in isolation.
 
 The expected deliverables are threefold:
 
 1. An HTML guide, on readthedocs.org or similar.
-2. A PDF (preferably in A4, A5, and US Letter sizes) for download.
+2. A PDF (preferably in A4, A5, and US Letter sizes) for download. RTD does this automatically.
 3. A slide-deck for inclusion into Network Operator Group conferences.
 
 It is likely that #3 will be created at a later date.
