@@ -16,7 +16,7 @@ If you peer with AS64512, they may also be sending you prefixes from AS64512, an
 
 To make life easier, `RPSL<http://www.irr.net/docs/rfc4012.txt>` specifies an "as-set" -- a set of ASNs in one object. It looks like this:
 
-.. code::
+.. code-block:: none
 
   as-set:         AS-EXAMPLE
   descr:          Example AS-SET
@@ -36,7 +36,7 @@ We can see here that if we expand "AS-EXAMPLE", we will get AS64512 plus all it'
 
 We can then find out which "route:" objects are stored in the IRRDB by performing an inverse lookup, such as:
 
-.. code::
+.. code-block:: none
 
   whois -i origin AS65000
 
@@ -44,7 +44,7 @@ This gives you many route objects that this ASN has registered it is "origin" fo
 
 Let's have a look at a sample bgpq3 run using Cisco IOS (bgpq3 currently supports IOS, IOS XR, JUNOS, BIRD -- more can be supported if demanded):
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 AS65000
   no ip prefix-list NN
@@ -56,7 +56,7 @@ Let's have a look at a sample bgpq3 run using Cisco IOS (bgpq3 currently support
 
 We can see here that AS65000 has registered it will be advertising three prefixes, and bgpq3 has spit out some configuration that will get rid of prefix-list "NN" and replace it with the three new prefixes. That's a bit wasteful though -- five entries. I'm sure we can summarise this... bgpq3 will do it for you!
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 -A AS65000
   no ip prefix-list NN
@@ -66,7 +66,7 @@ We can see here that AS65000 has registered it will be advertising three prefixe
 
 Excellent. However, if I now run it for AS65001 it will be over-written. Let's put a name in:
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 -A -l EXAMPLE-in AS65000
   no ip prefix-list EXAMPLE-in
@@ -75,7 +75,7 @@ Excellent. However, if I now run it for AS65001 it will be over-written. Let's p
 
 We don't want to accept any prefixes longer than a /24, as those are generally filtered on the internet:
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 -A -l EXAMPLE-in -m 24 AS65000
   no ip prefix-list EXAMPLE-in

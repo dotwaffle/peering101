@@ -23,24 +23,24 @@ One peer is sending us 75000 prefixes, yet the limit table says 500000 -- at the
 
 The max-prefix limit is usually set per-neighbor. A Cisco IOS router will be configured in the following way:
 
-.. code::
+.. code-block:: none
   neighbor 10.1.1.1 maximum-prefix 350
 
 This will drop the peer 10.1.1.1 when more than 350 prefixes are received.
 
 There are some other options you can consider:
 
-.. code::
+.. code-block:: none
   neighbor 10.1.1.1 maximum-prefix 350 warning-only
 
 This will only warn when the peer sends more than 350 prefixes, the session will remain Established.
 
-.. code::
+.. code-block:: none
   neighbor 10.1.1.1 maximum-prefix 350 100
 
 This will warn at 100 prefixes (remember, you're expecting 35) and drop at 350.
 
-.. code::
+.. code-block:: none
   neighbor 10.1.1.1 maximum-prefix 350 100 warning-only
 
 This will warn at 100 prefixes as before, but send a different warning at 350. The session will remain Established.

@@ -6,7 +6,7 @@ Verifying the prefix origin is registered through this peer is a good start, but
 
 With bgpq3, this is as simple as using the "-f" option which generates an as-path filter for you for a given AS-SET:
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 -f 65000 AS65000
   no ip as-path access-list NN
@@ -16,7 +16,7 @@ You will now only accept prefixes with the AS Path attribute starting "65000" an
 
 However, if we try and do this for an as-set, we'll see more data:
 
-.. code::
+.. code-block:: none
 
   $ bgpq3 -f 64512 AS-EXAMPLE
   no ip as-path access-list NN
@@ -27,7 +27,7 @@ Here we can see that we'll accept anything with the next ASN in the path being a
 
 This access-list can then be referred to as usual within your route-map:
 
-.. code::
+.. code-block:: none
 
   router bgp 65000
     neighbor 10.1.1.1 remote-as 64512
