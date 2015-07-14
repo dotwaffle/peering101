@@ -17,7 +17,6 @@ Contents:
    MaxPrefix
    PrefixLists
    ASPathFilters
-   BCP38
    RPKI
    FullExample
    FurtherReading
